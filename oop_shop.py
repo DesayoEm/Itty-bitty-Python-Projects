@@ -59,10 +59,11 @@ class GroceryProduct(Product):
 
 
 Laptop_1=ElectronicProduct("Laptop", 1500,10, 2.5, 3, "Dell")
-Milk_1=GroceryProduct("Milk", 4,50,1, date(2024,11, 15), True )
+Milk_1=GroceryProduct("Milk", 4,50,1.0, date(2024,11, 15), True )
 
 print(Laptop_1.get_info())
 print(Milk_1.get_info())
+
 (Laptop_1.apply_discount(15))
 #15% discount on laptop
 print(Laptop_1.get_info())
@@ -70,10 +71,13 @@ print(Laptop_1.get_info())
 print(Laptop_1.check_stock(5))
 print(Milk_1.check_stock(5))
 print(Milk_1.get_info())
+
 # Shipping cost for Laptop
 print(Laptop_1.calculate_shipping_cost())
 print(Milk_1.calculate_shipping_cost())
+
 # For the laptop, extend the warranty by 2 more years.
 print(Laptop_1.calculate_warranty_extension(2))
+
 # Check if milk is expired given today's date (assume today's date is "2024-10-01")
 print(Milk_1.check_if_expired(date(2024,10, 1)))
